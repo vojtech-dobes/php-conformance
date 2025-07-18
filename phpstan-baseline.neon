@@ -1,0 +1,25 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Parameter \#1 \$value of method Vojtechdobes\\Conformance\\Constraint\<covariant TPreValue,covariant TAnd\>\:\:validate\(\) expects never, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Conformance/Constraints/BooleanAll.php
+
+		-
+			message: '#^Method Vojtechdobes\\Conformance\\Constraints\\ForEachItem\:\:validate\(\) should return Vojtechdobes\\Conformance\\Result\<bool, covariant array\<TInnerPostValue\|TInnerPreValue\>\> but returns Vojtechdobes\\Conformance\\Result\<bool, TInnerPostValue\|TInnerPreValue\>\|Vojtechdobes\\Conformance\\Result\<true, array\<TInnerPreValue\>\>\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Conformance/Constraints/ForEachItem.php
+
+		-
+			message: '#^Parameter \#1 \$value of method Vojtechdobes\\Conformance\\Result\<bool,covariant TInnerPostValue\|TInnerPreValue\>\:\:withValue\(\) expects never, array\|ArrayAccess given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Conformance/Constraints/ForEachItem.php
+
+		-
+			message: '#^Parameter \#1 \$value of method Vojtechdobes\\Conformance\\Result\<bool,covariant mixed\>\:\:withValue\(\) expects never, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Conformance/Constraints/IsRecord.php

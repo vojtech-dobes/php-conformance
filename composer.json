@@ -1,0 +1,49 @@
+{
+	"authors": [
+		{
+			"name": "Vojtěch Dobeš",
+			"homepage": "https://vojtechdobes.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Vojtechdobes\\Conformance\\": "src/Conformance"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": false
+		},
+		"sort-packages": true
+	},
+	"keywords": [
+		"constraint",
+		"data",
+		"input",
+		"normalization",
+		"sanitization",
+		"schema",
+		"validation"
+	],
+	"license": [
+		"BSD-3-Clause"
+	],
+	"name": "vojtech-dobes/php-conformance",
+	"require": {
+		"php": "~8.4"
+	},
+	"require-dev": {
+		"nette/tester": "^2.5.4",
+		"php-parallel-lint/php-parallel-lint": "^1.4.0",
+		"phpstan/phpstan": "^2.1.12",
+		"phpstan/phpstan-strict-rules": "^2.0.4",
+		"spaze/phpstan-disallowed-calls": "^4.5.0",
+		"tracy/tracy": "^2.10.9",
+		"vojtech-dobes/php-codestyle": "~0.2.0"
+	},
+	"scripts": {
+		"lint": "parallel-lint src tests",
+		"phpstan": "phpstan analyse --memory-limit 256M",
+		"test": "composer dump-autoload && tester tests -o console-lines --cider --setup=tests/setup.php -C"
+	}
+}
