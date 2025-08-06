@@ -23,7 +23,7 @@ final class IsMap implements Conformance\Constraint
 
 		foreach (array_keys($value) as $key) {
 			if (is_string($key) === false) {
-				$result = $result->update($resultFactory->fail([
+				$result = $result->with($resultFactory->fail([
 					new Conformance\Error(
 						'Key must be a string',
 						[
