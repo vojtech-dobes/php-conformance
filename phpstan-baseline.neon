@@ -1,7 +1,19 @@
 parameters:
 	ignoreErrors:
 		-
-			message: '#^Parameter \#1 \$value of method Vojtechdobes\\Conformance\\Constraint\<covariant TPreValue,covariant TAnd\>\:\:validate\(\) expects never, mixed given\.$#'
+			message: '#^Method Vojtechdobes\\Conformance\\Constraints\\BooleanAll\:\:validate\(\) should return Vojtechdobes\\Conformance\\Result\<bool, TAnd\|TPreValue\> but returns Vojtechdobes\\Conformance\\Result\<bool, TAnd\|TPreValue\>\|Vojtechdobes\\Conformance\\Result\<true, TPreValue\>\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Conformance/Constraints/BooleanAll.php
+
+		-
+			message: '#^Parameter \#1 \$other of method Vojtechdobes\\Conformance\\Result\<bool,TAnd\|TPreValue\>\:\:with\(\) expects Vojtechdobes\\Conformance\\Result\<bool, TAnd\|TPreValue\>, Vojtechdobes\\Conformance\\Result\<bool, covariant TAnd\|TPreValue\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Conformance/Constraints/BooleanAll.php
+
+		-
+			message: '#^Parameter \#1 \$value of method Vojtechdobes\\Conformance\\Constraint\<covariant TPreValue,covariant TAnd\>\:\:validate\(\) expects never, TAnd\|TPreValue given\.$#'
 			identifier: argument.type
 			count: 1
 			path: src/Conformance/Constraints/BooleanAll.php

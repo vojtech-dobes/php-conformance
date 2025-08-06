@@ -30,7 +30,7 @@ final class BooleanAll implements Conformance\Constraint
 		$result = $resultFactory->pass();
 
 		foreach ($this->constraints as $constraint) {
-			$result = $result->update(
+			$result = $result->with(
 				$constraint->validate($value, $resultFactory),
 			);
 
